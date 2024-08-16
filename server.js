@@ -18,7 +18,13 @@ connectCloudinary();
 
 //middleware
 app.use(express.json());
-app.use(cors());
+app.use(express.urlencoded({ extended: true }));
+app.use(cors({
+    origin: ["https://abgvibes-bgoodlucks-projects.vercel.app", "https://abgvibes-admin.vercel.app"],
+    allowedHeaders: ["Content-Type", "Authorization", "token"],
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"], 
+    credentials: true
+}));
 
 //initializing routes
 app.use("/api/song", songRouter)
