@@ -20,7 +20,7 @@ connectCloudinary();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
-    origin: [process.env.FRONTEND_URL || "https://abgvibes-bgoodlucks-projects.vercel.app", process.env.FRONTEND_ADMIN_URL || "https://abgvibes-admin.vercel.app"],
+    origin: [process.env.FRONTEND_URL || "https://abgvibes.vercel.app", process.env.FRONTEND_ADMIN_URL || "https://abgvibes-admin.vercel.app"],
     // allowedHeaders: ["Content-Type", "Authorization", "token"],
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"], 
     // credentials: true
