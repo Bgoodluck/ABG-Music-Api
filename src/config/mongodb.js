@@ -7,8 +7,8 @@ const connectDB = async () => {
     });
 
     // Extract the MongoDB URI from environment variables
-    const dbName = 'ABG_vibes'; // Ensure this is a valid database name without slashes
-    const uri = `${process.env.MONGODB_URI}/${dbName}`;
+    // Ensure this is a valid database name without slashes
+    const uri = `${process.env.MONGODB_URI}`;
 
     // Connect to MongoDB using the constructed URI
     try {
