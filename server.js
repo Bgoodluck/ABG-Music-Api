@@ -29,6 +29,10 @@ app.use(cors({
     credentials: true
 }));
 
+
+app.use(express.static('public')); // 'public' is your directory for static files
+
+
 //initializing routes
 app.use("/api/song", songRouter)
 app.use("/api/album", albumRouter)
