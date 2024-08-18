@@ -19,6 +19,9 @@ connectCloudinary();
 //middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.options('*', cors());
+
 app.use(cors({
     origin: [process.env.FRONTEND_URL || "https://abg-music-app.onrender.com", process.env.FRONTEND_ADMIN_URL || "https://abgvibes-admin.vercel.app"],
     allowedHeaders: ["Content-Type", "Authorization", "token"],
